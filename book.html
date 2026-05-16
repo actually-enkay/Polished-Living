@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book — Polished Living</title>
+  <meta name="description" content="Book a Polished Living clean in 90 seconds. Flat rates, no card to hold your spot." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="nav"></div>
+
+  <main>
+    <section class="book-section">
+      <p class="eyebrow">Book or quote</p>
+      <h1 style="font-family: var(--font-display); font-size: clamp(40px, 6vw, 88px); line-height: 0.95; font-weight: 300; letter-spacing: -0.035em; margin-top: 16px;">Let's get you on the <em class="serif-italic">schedule</em>.</h1>
+
+      <!-- Step indicator -->
+      <div class="step-bar">
+        <div class="step-pill">
+          <span class="step-pill-num">01</span>
+          <span class="step-pill-label">Service</span>
+        </div>
+        <div class="step-pill-line"></div>
+        <div class="step-pill">
+          <span class="step-pill-num">02</span>
+          <span class="step-pill-label">Details</span>
+        </div>
+        <div class="step-pill-line"></div>
+        <div class="step-pill">
+          <span class="step-pill-num">03</span>
+          <span class="step-pill-label">Date &amp; time</span>
+        </div>
+        <div class="step-pill-line"></div>
+        <div class="step-pill">
+          <span class="step-pill-num">04</span>
+          <span class="step-pill-label">Your info</span>
+        </div>
+        <div class="step-pill-line"></div>
+        <div class="step-pill">
+          <span class="step-pill-num">05</span>
+          <span class="step-pill-label">Confirm</span>
+        </div>
+      </div>
+
+      <div class="book-grid">
+        <div>
+          <form id="bookForm">
+            <!-- STEP 1 -->
+            <div class="step-panel" data-step="1">
+              <h2 class="step-h">What kind of clean?</h2>
+              <div class="option-grid cols-2" data-select-group="service">
+                <button type="button" class="option" data-value="Residential">
+                  <i data-lucide="home" width="22" height="22" stroke-width="1.4"></i>
+                  <p class="option-name">Residential</p>
+                  <p class="option-desc">The standard top-to-bottom clean for your home.</p>
+                  <p class="option-price mono-num">from $149</p>
+                </button>
+                <button type="button" class="option" data-value="Deep Clean">
+                  <i data-lucide="sparkles" width="22" height="22" stroke-width="1.4"></i>
+                  <p class="option-name">Deep Clean</p>
+                  <p class="option-desc">Inside cabinets, baseboards, behind appliances.</p>
+                  <p class="option-price mono-num">from $289</p>
+                </button>
+                <button type="button" class="option" data-value="Move-In / Out">
+                  <i data-lucide="truck" width="22" height="22" stroke-width="1.4"></i>
+                  <p class="option-name">Move-In / Out</p>
+                  <p class="option-desc">Empty homes prepared for keys to change hands.</p>
+                  <p class="option-price mono-num">from $349</p>
+                </button>
+                <button type="button" class="option" data-value="Commercial">
+                  <i data-lucide="building-2" width="22" height="22" stroke-width="1.4"></i>
+                  <p class="option-name">Commercial</p>
+                  <p class="option-desc">Offices, studios, and storefronts.</p>
+                  <p class="option-price mono-num">from $199</p>
+                </button>
+                <button type="button" class="option" data-value="Post-Construction">
+                  <i data-lucide="hard-hat" width="22" height="22" stroke-width="1.4"></i>
+                  <p class="option-name">Post-Construction</p>
+                  <p class="option-desc">Dust, debris, and residue after a renovation.</p>
+                  <p class="option-price mono-num">from $459</p>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="step-panel" data-step="2">
+              <h2 class="step-h">About the space.</h2>
+              <label class="field-label">Home size</label>
+              <div class="option-grid cols-5" data-select-group="size">
+                <button type="button" class="option-sm" data-value="Studio">Studio</button>
+                <button type="button" class="option-sm" data-value="1 bed">1 bed</button>
+                <button type="button" class="option-sm" data-value="2 bed">2 bed</button>
+                <button type="button" class="option-sm" data-value="3 bed">3 bed</button>
+                <button type="button" class="option-sm" data-value="4+ bed">4+ bed</button>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Any special notes?</label>
+                <textarea class="input" data-field="notes" placeholder="Pets, allergies, areas to focus on or skip, gate codes…" rows="5"></textarea>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="step-panel" data-step="3">
+              <h2 class="step-h">When works?</h2>
+              <label class="field-label">Pick a date</label>
+              <div class="option-grid cols-7" id="dateGrid"></div>
+
+              <div class="field-group">
+                <label class="field-label">Arrival window</label>
+                <div class="option-grid cols-4" data-select-group="time">
+                  <button type="button" class="option-sm mono-num" data-value="8–9am">8–9am</button>
+                  <button type="button" class="option-sm mono-num" data-value="9–10am">9–10am</button>
+                  <button type="button" class="option-sm mono-num" data-value="10–11am">10–11am</button>
+                  <button type="button" class="option-sm mono-num" data-value="12–1pm">12–1pm</button>
+                  <button type="button" class="option-sm mono-num" data-value="1–2pm">1–2pm</button>
+                  <button type="button" class="option-sm mono-num" data-value="2–3pm">2–3pm</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="step-panel" data-step="4">
+              <h2 class="step-h">Where to send the confirmation.</h2>
+              <div class="input-grid">
+                <div>
+                  <label class="field-label">Full name</label>
+                  <input class="input" type="text" data-field="name" placeholder="Maria Andersen" />
+                </div>
+                <div>
+                  <label class="field-label">Email</label>
+                  <input class="input" type="email" data-field="email" placeholder="you@home.com" />
+                </div>
+                <div>
+                  <label class="field-label">Phone</label>
+                  <input class="input" type="tel" data-field="phone" placeholder="(312) 555-0199" />
+                </div>
+                <div>
+                  <label class="field-label">Address</label>
+                  <input class="input" type="text" data-field="address" placeholder="123 N Main St, Chicago" />
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 5 -->
+            <div class="step-panel" data-step="5">
+              <h2 class="step-h">You're all set.</h2>
+              <p style="color: var(--ink-soft); font-size: 16px; line-height: 1.6;">Confirmation sent to <span class="mono-num" id="sumEmail" style="font-weight: 500;">your email</span>. A real human reviews each booking — we'll reach out within an hour if anything needs adjusting.</p>
+              <div class="success-summary">
+                <p class="eyebrow" style="opacity: 0.7;">Booking summary</p>
+                <div class="success-summary-row">
+                  <span class="label">Service</span><span id="sumService">—</span>
+                  <span class="label">Home size</span><span id="sumSize">—</span>
+                  <span class="label">Date</span><span id="sumDate">—</span>
+                  <span class="label">Arrival</span><span class="mono-num" id="sumTime">—</span>
+                </div>
+              </div>
+              <a href="index.html" class="btn btn-primary" style="margin-top: 32px;">Back to home <i data-lucide="arrow-right" width="14" height="14"></i></a>
+            </div>
+
+            <!-- Nav -->
+            <div class="step-nav" id="stepNav">
+              <button type="button" class="btn btn-ghost" id="stepBack">← Back</button>
+              <button type="button" class="btn btn-primary" id="stepNext">Continue <i data-lucide="arrow-right" width="14" height="14"></i></button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <div class="book-sidebar">
+            <p class="eyebrow">Prefer a real human?</p>
+            <h3>Call us — we answer between 7am and 7pm CT.</h3>
+            <div class="rule" style="margin: 24px 0;"></div>
+            <a href="tel:+13125550199"><i data-lucide="phone" width="14" height="14"></i><span class="mono-num" style="font-weight: 500;">(312) 555-0199</span></a>
+            <a href="mailto:hello@polishedliving.com"><i data-lucide="mail" width="14" height="14"></i>hello@polishedliving.com</a>
+            <div class="rule" style="margin: 24px 0;"></div>
+            <div class="trust-note">
+              <i data-lucide="shield-check" width="18" height="18" stroke-width="1.4"></i>
+              <span>Booking takes 60 seconds. No card required to hold your spot.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
