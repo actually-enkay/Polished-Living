@@ -54,10 +54,10 @@ In `script.js`, edit the `CONFIG.business` object:
 ```js
 business: {
   name: "Polished Living",
-  phone: "(312) 555-0199",
-  phoneHref: "tel:+13125550199",
-  email: "hello@polishedliving.com",
-  city: "Chicago, IL",
+  phone: "(786) 671-7415",
+  phoneHref: "tel:+17866717415",
+  email: "contact@polishedliving.work",
+  city: "Pensacola, FL",
   hoursWeekday: "Mon–Sat · 7am–7pm",
   hoursWeekend: "Sun · 9am–4pm",
 },

@@ -1,5 +1,5 @@
 /* =========================================================
-   QUIBKLE — Shared JavaScript
+   POLISHED LIVING — Shared JavaScript
    - Renders nav + footer into every page
    - Handles mobile menu, FAQ accordion, booking flow
    - Submits forms to Formspree (set your endpoint in CONFIG)
@@ -17,10 +17,11 @@ const CONFIG = {
   business: {
     name: "Polished Living",
     tagline: "Clean spaces. Elevated living.",
-    phone: "(312) 555-0199",
-    phoneHref: "tel:+13125550199",
-    email: "hello@polishedliving.com",
-    city: "Chicago, IL",
+    phone: "(786) 671-7415",
+    phoneHref: "tel:+17866717415",
+    email: "contact@polishedliving.work",
+    supportEmail: "support@polishedliving.work",
+    city: "Pensacola, FL",
     hoursWeekday: "Mon–Sat · 7am–7pm",
     hoursWeekend: "Sun · 9am–4pm",
   },
@@ -142,20 +143,23 @@ function renderFooter() {
           <div class="footer-col-2">
             <p class="eyebrow" style="color: var(--cream-soft); margin-bottom: 20px;">Areas</p>
             <ul class="footer-list">
-              <li>Lincoln Park</li>
-              <li>Wicker Park</li>
-              <li>River North</li>
-              <li>West Loop</li>
-              <li>Logan Square</li>
-              <li>Lakeview</li>
+              <li>Downtown Pensacola</li>
+              <li>East Hill</li>
+              <li>North Hill</li>
+              <li>Cordova Park</li>
+              <li>Gulf Breeze</li>
+              <li>Pensacola Beach</li>
+              <li>Perdido Key</li>
+              <li>Pace &amp; Milton</li>
             </ul>
           </div>
 
           <div class="footer-col-3">
             <p class="eyebrow" style="color: var(--cream-soft); margin-bottom: 20px;">Reach us</p>
             <ul class="footer-list">
-              <li class="with-icon"><i data-lucide="phone" width="14" height="14"></i><span class="mono-num">${CONFIG.business.phone}</span></li>
-              <li class="with-icon"><i data-lucide="mail" width="14" height="14"></i>${CONFIG.business.email}</li>
+              <li class="with-icon"><i data-lucide="phone" width="14" height="14"></i><a href="${CONFIG.business.phoneHref}"><span class="mono-num">${CONFIG.business.phone}</span></a></li>
+              <li class="with-icon"><i data-lucide="mail" width="14" height="14"></i><a href="mailto:${CONFIG.business.email}">${CONFIG.business.email}</a></li>
+              <li class="with-icon"><i data-lucide="life-buoy" width="14" height="14"></i><a href="mailto:${CONFIG.business.supportEmail}">${CONFIG.business.supportEmail}</a></li>
               <li class="with-icon"><i data-lucide="map-pin" width="14" height="14"></i>${CONFIG.business.city}</li>
             </ul>
             <p class="eyebrow" style="color: var(--cream-soft); margin: 32px 0 12px;">Hours</p>
