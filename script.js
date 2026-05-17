@@ -11,7 +11,7 @@
 const CONFIG = {
   // 1) Sign up at https://formspree.io (free) — create a form, paste your endpoint here
   //    Looks like: https://formspree.io/f/xxxxxxxx
-  formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID",
+  formspreeEndpoint: "https://formspree.io/f/xdajnvyv",
 
   // 2) Business info — used in nav, footer, and contact links
   business: {
